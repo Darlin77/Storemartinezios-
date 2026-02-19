@@ -12,12 +12,38 @@ body {
     background: #0a0a0a;
     color: white;
     font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Fondo de Video Silencioso */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(8px) brightness(0.3);
+    object-fit: cover;
 }
 
 header {
     text-align: center;
     padding: 40px;
     animation: fadeIn 2s ease-in-out;
+    position: relative;
 }
 
 img.profile {
@@ -32,26 +58,18 @@ h1 {
     margin-bottom: 10px;
 }
 
-.subtitle {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.developer {
-    font-size: 13px;
-    color: #ff0077;
-}
-
 .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
     padding: 20px;
+    position: relative;
 }
 
 .card {
-    background: #111;
+    background: rgba(17, 17, 17, 0.75);
+    backdrop-filter: blur(10px);
     border: 1px solid #ff0077;
     padding: 20px;
     width: 260px;
@@ -66,7 +84,8 @@ h1 {
 }
 
 .instrucciones {
-    background: rgba(255, 0, 119, 0.1);
+    background: rgba(255, 0, 119, 0.15);
+    backdrop-filter: blur(5px);
     border: 1px dashed #ff0077;
     padding: 15px;
     margin: 20px auto;
@@ -74,7 +93,7 @@ h1 {
     border-radius: 10px;
     text-align: center;
     font-size: 13px;
-    color: #fff;
+    position: relative;
 }
 
 button {
@@ -87,7 +106,6 @@ button {
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
     margin-top: 10px;
-    transition: 0.3s;
 }
 
 button.whatsapp {
@@ -95,16 +113,6 @@ button.whatsapp {
     margin-top: 20px;
     width: auto;
     padding: 12px 30px;
-}
-
-button:hover {
-    background: #ff3399;
-    box-shadow: 0 0 10px #ff3399;
-}
-
-button.whatsapp:hover {
-    background: #1eb954;
-    box-shadow: 0 0 10px #25d366;
 }
 
 @keyframes fadeIn {
@@ -117,11 +125,18 @@ footer {
     padding: 20px;
     font-size: 12px;
     color: #777;
+    position: relative;
 }
 
 </style>
 </head>
 <body onclick="document.getElementById('bg-music').play()">
+
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="https://files.catbox.moe/zlxans.mp4" type="video/mp4">
+    </video>
+</div>
 
 <audio id="bg-music" loop>
     <source src="https://files.catbox.moe/rjgiio.mp3" type="audio/mpeg">
@@ -139,28 +154,26 @@ footer {
 </div>
 
 <section class="products">
+    <div class="card">
+        <h3>Panel Premium iOS</h3>
+        <p>Acceso completo al sistema</p>
+        <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$10 USD</p>
+        <a href="https://www.paypal.me/martinezios/10" target="_blank">
+            <button>Comprar Ahora</button>
+        </a>
+    </div>
 
-<div class="card">
-    <h3>Panel Premium iOS</h3>
-    <p>Acceso completo al sistema</p>
-    <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$10 USD</p>
-    <a href="https://www.paypal.me/martinezios/10" target="_blank">
-        <button>Comprar Ahora</button>
-    </a>
-</div>
-
-<div class="card">
-    <h3>DNS Config Premium</h3>
-    <p>Configuración avanzada personalizada</p>
-    <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$5 USD</p>
-    <a href="https://www.paypal.me/martinezios/5" target="_blank">
-        <button>Comprar Ahora</button>
-    </a>
-</div>
-
+    <div class="card">
+        <h3>DNS Config Premium</h3>
+        <p>Configuración avanzada personalizada</p>
+        <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$5 USD</p>
+        <a href="https://www.paypal.me/martinezios/5" target="_blank">
+            <button>Comprar Ahora</button>
+        </a>
+    </div>
 </section>
 
-<div style="text-align: center; padding-bottom: 40px;">
+<div style="text-align: center; padding-bottom: 40px; position: relative;">
     <a href="https://wa.link/sd3rq8" target="_blank">
         <button class="whatsapp">📲 Enviar Comprobante vía WhatsApp</button>
     </a>
