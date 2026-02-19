@@ -57,11 +57,24 @@ h1 {
     width: 260px;
     border-radius: 15px;
     transition: 0.3s;
+    text-align: center;
 }
 
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #ff0077;
+}
+
+.instrucciones {
+    background: rgba(255, 0, 119, 0.1);
+    border: 1px dashed #ff0077;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
 }
 
 button {
@@ -73,10 +86,25 @@ button {
     width: 100%;
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button.whatsapp {
+    background: #25d366;
+    margin-top: 20px;
+    width: auto;
+    padding: 12px 30px;
 }
 
 button:hover {
     background: #ff3399;
+    box-shadow: 0 0 10px #ff3399;
+}
+
+button.whatsapp:hover {
+    background: #1eb954;
+    box-shadow: 0 0 10px #25d366;
 }
 
 @keyframes fadeIn {
@@ -93,7 +121,11 @@ footer {
 
 </style>
 </head>
-<body>
+<body onclick="document.getElementById('bg-music').play()">
+
+<audio id="bg-music" loop>
+    <source src="https://files.catbox.moe/rjgiio.mp3" type="audio/mpeg">
+</audio>
 
 <header>
     <img src="https://files.catbox.moe/lnqy2t.webp" class="profile">
@@ -102,27 +134,37 @@ footer {
     <p class="developer">developer: Sr Martinez iOS</p>
 </header>
 
+<div class="instrucciones">
+    ⚠️ <strong>Paso a seguir:</strong> Luego de realizar tu pago, toca el botón verde de abajo para enviarme el comprobante por WhatsApp y entregarte tu acceso.
+</div>
+
 <section class="products">
 
 <div class="card">
     <h3>Panel Premium iOS</h3>
     <p>Acceso completo al sistema</p>
-    <p>$10 USD</p>
+    <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$10 USD</p>
     <a href="https://www.paypal.me/martinezios/10" target="_blank">
-        <button>Comprar</button>
+        <button>Comprar Ahora</button>
     </a>
 </div>
 
 <div class="card">
     <h3>DNS Config Premium</h3>
     <p>Configuración avanzada personalizada</p>
-    <p>$5 USD</p>
+    <p style="font-size: 22px; color: #ff0077; font-weight: bold;">$5 USD</p>
     <a href="https://www.paypal.me/martinezios/5" target="_blank">
-        <button>Comprar</button>
+        <button>Comprar Ahora</button>
     </a>
 </div>
 
 </section>
+
+<div style="text-align: center; padding-bottom: 40px;">
+    <a href="https://wa.link/sd3rq8" target="_blank">
+        <button class="whatsapp">📲 Enviar Comprobante vía WhatsApp</button>
+    </a>
+</div>
 
 <footer>
 © 2026 Store Martínez iOS - Todos los derechos reservados
