@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Martínez iOS</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<style>
+
+body {
+    margin: 0;
+    background: #0a0a0a;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+img.profile {
+    width: 140px;
+    border-radius: 20px;
+    border: 2px solid #ff0077;
+    box-shadow: 0 0 20px #ff0077;
+}
+
+h1 {
+    color: #ff0077;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.developer {
+    font-size: 13px;
+    color: #ff0077;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #ff0077;
+    padding: 20px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0077;
+}
+
+button {
+    background: #ff0077;
+    border: none;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+    background: #ff3399;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://files.catbox.moe/lnqy2t.webp" class="profile">
+    <h1>Store Martínez iOS 🛒</h1>
+    <p class="subtitle">Sitio Oficial Para Ventas De Xit de Martínez iOS</p>
+    <p class="developer">developer: Sr Martinez iOS</p>
+</header>
+
+<section class="products">
+
+<div class="card">
+    <h3>Panel Premium iOS</h3>
+    <p>Acceso completo al sistema</p>
+    <p>$25 USD</p>
+    <a href="https://www.paypal.me/martinezios/25" target="_blank">
+        <button>Comprar</button>
+    </a>
+</div>
+
+<div class="card">
+    <h3>DNS Config Premium</h3>
+    <p>Configuración avanzada personalizada</p>
+    <p>$15 USD</p>
+    <a href="https://www.paypal.me/martinezios/15" target="_blank">
+        <button>Comprar</button>
+    </a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Store Martínez iOS - Todos los derechos reservados
+</footer>
+
+</body>
+</html>
