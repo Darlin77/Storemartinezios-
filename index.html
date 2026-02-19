@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Fondo de Video Silencioso */
+/* Fondo de Video Silencioso con Poster */
 .video-background {
     position: fixed;
     top: 0;
@@ -24,6 +24,9 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    background-image: url('https://files.catbox.moe/4yd83g.jpeg'); /* Imagen de respaldo extra */
+    background-size: cover;
+    background-position: center;
 }
 
 video {
@@ -133,7 +136,7 @@ footer {
 <body onclick="document.getElementById('bg-music').play()">
 
 <div class="video-background">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline poster="https://files.catbox.moe/4yd83g.jpeg">
         <source src="https://files.catbox.moe/zlxans.mp4" type="video/mp4">
     </video>
 </div>
